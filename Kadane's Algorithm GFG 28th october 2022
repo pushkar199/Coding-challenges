@@ -1,0 +1,12 @@
+def maxSubArraySum(self,arr,N):
+        temp=0
+        ans=arr[0]
+        for i in range(N):
+            if arr[i]<temp+arr[i]:
+                temp=temp+arr[i]
+            else:
+                temp=arr[i]
+                
+            if ans<temp:
+                ans=temp
+        return ans
